@@ -49,3 +49,20 @@
     $ sudo docker run hello-world
 
   ```
+
+## docker machine
+
+- 使用 docker-machine 创建 virtualbox 虚拟机
+
+  ```
+    docker-machine version
+    docker-machine create demo
+    docker-machine ls
+    docker-machine ssh demo
+    docker-machine stop demo
+    docker-machine env demo
+    eval $(docker-machine env demo)
+  ```
+
+- 让 docker-machine 和阿里云搞 cp
+  参考`https://github.com/AliyunContainerService/docker-machine-driver-aliyunecs`
