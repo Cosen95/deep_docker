@@ -66,3 +66,38 @@
 
 - 让 docker-machine 和阿里云搞 cp
   参考`https://github.com/AliyunContainerService/docker-machine-driver-aliyunecs`
+
+## docker 底层
+
+### docker platform
+
+- docker 提供了一个开发，打包，运行 app 的平台
+- 把 app 和底层 infrastructure 隔离开来
+
+![docker platform](./assets/WechatIMG10.png)
+
+### docker engine
+
+- 后台进程(dockerd)
+
+- REST API Server
+
+- CLI 接口(docker)
+
+![docker engine](./assets/WechatIMG11.png)
+
+### docker architecture
+
+![docker architecture](./assets/WechatIMG9.png)
+
+### 底层技术支持
+
+- Namespaces: 做隔离 pid,net,ipc,mnt,uts
+
+* Control groups: 做资源限制
+
+* Union file systems: Container 和 image 的分层
+
+## docker image
+
+## docker container
