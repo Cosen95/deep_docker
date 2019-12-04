@@ -1,5 +1,7 @@
 # 深入系统 docker 学习
 
+![docker platform](./assets/16410734eb1ed373.png)
+
 ## 安装
 
 ### macos 安装 docker
@@ -68,6 +70,8 @@
   参考`https://github.com/AliyunContainerService/docker-machine-driver-aliyunecs`
 
 ## docker 底层
+
+![docker platform](./assets/1640cae21c18e404.png)
 
 ### docker platform
 
@@ -156,3 +160,21 @@
 | ------------------ | :---------------- |
 | -- -cpuset-cpus="" | 允许使用的 CPU 集 |
 | -c,- -cpu-shares=0 | CPU 共享权值      |
+
+### dockerfile 指令
+
+| 命令       | 说明                     | 示例                                               |
+| ---------- | :----------------------- | :------------------------------------------------- |
+| FROM       | 基于这个 Image 开始      | FROM nginx:latest                                  |
+| ENV        | 环境变量                 | ENV localfile /usr/local/nginx                     |
+| RUN        | 新层中执行命令           | RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME |
+| LABEL      | 设置 metadata            | LABEL version="1.0"                                |
+| MAINTAINER | 维护者 (deprecated)      | maintainer="feng shuan<fengshuan95@gmail.com>"     |
+| EXPOSE     | 声明容器监听端口         | EXPOSE 80 443                                      |
+| ADD        | 添加文件                 | ADD ./dist \${foo}/html                            |
+| COPY       | 复制文件                 | COPY ./dist \${foo}/html                           |
+| ENTRYPOINT | 容器启动时执行指令       |                                                    |
+| CMD        | 容器启动时执行指令默认值 | CMD ["-la"]                                        |
+| WORKDIR    | 设置工作目录             | WORKDIR /path/to/workdir                           |
+| VOLUME     | 挂载点                   | VOLUME ["/data"]                                   |
+| USER       | 指定操作用户             | USER www                                           |
