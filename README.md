@@ -98,9 +98,9 @@
 
 - Namespaces: 做隔离 pid,net,ipc,mnt,uts
 
-* Control groups: 做资源限制
+- Control groups: 做资源限制
 
-* Union file systems: Container 和 image 的分层
+- Union file systems: Container 和 image 的分层
 
 ## docker image(镜像)
 
